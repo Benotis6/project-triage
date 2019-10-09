@@ -5,6 +5,7 @@ var patientTriageApp = new Vue({
   },
   methods: {
     handleSubmit() {
+<<<<<<< HEAD
        fetch('api/waiting/post.php', {
           method:'POST',
           body: JSON.stringify(this.patient),
@@ -20,6 +21,19 @@ var patientTriageApp = new Vue({
         })
        // waitingApp.patients.push(this.patient);
        this.handleReset();
+=======
+      fetch('api/waiting/post.php', {
+        method:'POST',
+        body: JSON.stringify(this.patient),
+        headers: {
+          "Content-Type": "application/json; charset=utf-8"
+        }
+      })
+      .then(response => response.json())
+      .then(json => { waitingApp.patients = json })
+
+      this.handleReset();
+>>>>>>> b34d72773f8d293f6f3d82023f2916019ee98346
     },
     handleReset() {
       this.patient = {
