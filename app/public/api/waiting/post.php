@@ -8,11 +8,6 @@ $stmt = $db->prepare(
 'INSERT INTO PatientVisit
 (patientGuid, visitDescription, priority)
 VALUES ('.$POST['patientGuid']. ',?,?)' //Parameterized querry
-=======
-<?php
-
-// Step 0: Validate the incoming data
-
 
 // Step 1: Get a datase connection from our help class
 $db = DbConnection::getConnection();
@@ -34,7 +29,6 @@ $stmt->execute([
 //STEP 4: OUTPUT
 HEADER('HTTP/1.1 303 SEE OTHER'); //WHEN I SEND YOU SOMEWHERE ELSE DO A GET IN THAT OTHE RPLACE
 HEADER('Location: ../waiting/'); //here is where you go for your data
-=======
   $_POST['priority']
 ]);
 

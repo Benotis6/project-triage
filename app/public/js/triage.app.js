@@ -21,7 +21,6 @@ var patientTriageApp = new Vue({
         })
        // waitingApp.patients.push(this.patient);
        this.handleReset();
-=======
       fetch('api/waiting/post.php', {
         method:'POST',
         body: JSON.stringify(this.patient),
